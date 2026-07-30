@@ -34,40 +34,40 @@ for i in range(1,4):
         break
 else:
     print("Access Denied!")
-    count= 3
     exit()
        
 
 
 
 # grade calculation
-if not (count==3):
-  user_score= int(input("Enter your score (0-100): "))
 
-  if (80 <= user_score <=100): # I'm setting upper and lower bounds to enure grades are given only when score between 0 and 100
+user_score= int(input("Enter your score (0-100): "))
+
+if (80 <= user_score <=100): # I'm setting upper and lower bounds to enure grades are given only when score between 0 and 100
    grade= "A"
-  elif (75 <= user_score <= 79):
+elif (75 <= user_score <= 79):
    grade= "B+"
-  elif (70 <= user_score <= 74):
+elif (70 <= user_score <= 74):
    grade= "B"
-  elif (65 <= user_score <= 69):
+elif (65 <= user_score <= 69):
    grade= "C+"
-  elif (60 <= user_score <= 64):
+elif (60 <= user_score <= 64):
    grade= "C"
-  elif (55 <= user_score <= 59):
+elif (55 <= user_score <= 59):
    grade= "D+"
-  elif (50 <= user_score <= 54):
+elif (50 <= user_score <= 54):
    grade="D"
-  elif (45 <= user_score <= 49):
+elif (45 <= user_score <= 49):
    grade= "E"
-  elif (0 <= user_score <= 44):
+elif (0 <= user_score <= 44):
    grade="F"
-  else:
+else:
    print("Invalid input! Score must be between 0-100")
    grade= None # I chose to return None
 # grade is stored based on condtion met
-  print(f"Your grade : {grade}")
 
+if grade is not None:
+  print(f"Your grade : {grade}")
   print(">>"*15)
 
 
